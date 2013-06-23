@@ -7,5 +7,6 @@ $ virtualenv env
 $ . env/bin/activate
 $ python setup install
 $ mv config.py.tpl config.py
-$ RMON_SETTINGS=/path/to/config.py rmon-server
+$ make
+$ RMON_SETTINGS=/path/to/config.py gunicorn rmon:app
 ```
