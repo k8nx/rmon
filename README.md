@@ -6,5 +6,6 @@
 $ virtualenv env
 $ . env/bin/activate
 $ python setup install
-$ RMON_SETTINGS=/path/to/config rmon-server
+$ mv config.py.tpl config.py
+$ RMON_SETTINGS=/path/to/config.py rmon-server
 ```
