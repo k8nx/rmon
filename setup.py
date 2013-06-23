@@ -29,9 +29,9 @@ setup(
         'Jinja2==2.6',
         'Werkzeug==0.8.3',
         'flask-wtf==0.8.3',
-        'redis==2.7.3',
         'flask-assets==0.8',
-        'requests==1.2.0'
+        'requests==1.2.0',
+        'redis==2.7.6'
     ],
     classifiers=[
         'Programming Language :: Python'
