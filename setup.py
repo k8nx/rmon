@@ -1,30 +1,28 @@
 """
-RMon
------------
+rmon
+----
 
-Redis monitor system
-
-Links
-`````
-
-* `documentation <http://packages.python.org/Flask-OAuth>`_
-* `development version
-  <http://github.com/mitsuhiko/flask-oauth/zipball/master#egg=Flask-OAuth-dev>`_
+redis monitor system
 """
-from setuptools import setup
-
+from setuptools import setup, find_packages
 
 setup(
-    name='RMon',
+    name='rmon',
     version='0.1.0',
     url='http://github.com/dgkim84/redis-monitor-temp-repo',
     license='MIT',
+    packages=find_packages(),
     author='',
     author_email='',
-    description='Redis monitor system',
+    description='redis monitor system',
     long_description=__doc__,
-    py_modules=['RMon'],
+    py_modules=['rmon'],
     platforms='any',
+    entry_points={
+        'console_scripts': [
+            'rmon-server = rmon.cli:run'
+        ]
+    },
     install_requires=[
         'Flask==0.9',
         'gevent==0.13.8',
