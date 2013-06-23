@@ -20,7 +20,6 @@ setup(
     platforms='any',
     entry_points={
         'console_scripts': [
-            'rmon-server = rmon.cli:run'
         ]
     },
     install_requires=[
