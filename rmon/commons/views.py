@@ -9,4 +9,4 @@ mod = Blueprint('commons', __name__, url_prefix='')
 
 @mod.route('/')
 def index():
-    return "OK"
+    return render_template('index.html')

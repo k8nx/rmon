@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app>
+<head>
+<title>redis monitor system</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/assets/libs/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/libs/bootstrap/css/bootstrap-responsive.min.css" />
+<script type="text/javascript" src="/assets/libs/angular/angular.min.js"></script>
+<script type="text/javascript" src="/assets/libs/requirejs/require.js"></script>
+</head>
+<body>
+{% block extra %}{% endblock %}
+<div id="rmon-app" ng-view>
+{% block content %}{% endblock %}
+</div>
+{% block module %}{% endblock %}
+</body>
+</html>
+

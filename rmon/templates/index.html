@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+{% endblock %}
+{% block module %}
+<script type="text/javascript">
+require.config({
+  baseUrl: '/assets'
+  , paths: {
+  }
+  , urlArgs : 'v=' + new Date().getTime()
+});
+
+require(['rmon/rmon.initialize'], function() {
+  require(['rmon/rmon.app'], function() {
+    angular.bootstrap($('#rmon-app'), ['rmon'])
+  });
+});
+</script>
+{% endblock %}
