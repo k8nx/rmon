@@ -31,7 +31,8 @@ setup(
         'flask-wtf==0.8.3',
         'flask-assets==0.8',
         'requests==1.2.0',
-        'redis==2.7.6'
+        'redis==2.7.6',
+        'pubsub==0.1.1'
     ],
     classifiers=[
         'Programming Language :: Python'
