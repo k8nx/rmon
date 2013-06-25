@@ -3,8 +3,8 @@ define(['rmon/rmon.controllers'], function(controllers) {
     .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
       $locationProvider.html5Mode(true);
       $routeProvider.when('/', {
-        templateUrl: '',
-        controller: controllers.DashboardCtrl
+        templateUrl: '/assets/templates/dashboard.html',
+        controller: controllers.RMonCtrls
       });
     }]);
 });
