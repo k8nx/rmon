@@ -6,7 +6,7 @@ class Clusters:
         self.loader = None
         self.config = Configuration()
         self.clusters = self.load()
-        self.ids = map(lambda c: c.name, self.clusters)
+        self.ids = map(lambda c: c.id, self.clusters)
 
     def update(self, kv):
         self.config.update(kv)
