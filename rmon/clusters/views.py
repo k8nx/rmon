@@ -3,19 +3,18 @@
 
 """
 from flask import Blueprint
-from flask import request, session, render_template
+from flask import request, session, render_template, abort
 
 from rmon.clusters import clusters
-
-import json
 
 mod = Blueprint('cluster', __name__, url_prefix='/v1/clusters')
 
 @mod.route('/')
 def index():
-    return json.dumps(clusters.ids)
+    return repr(clusters.clusters)
 
 @mod.route('/<string:id>/nodes', methods=('GET','POST'))
-def nodes():
+def nodes(id):
     if clusters.get(id) is not None:
-        return json.dumps(clusters.get(id).nodes)
+        return repr(clusters.get(id))
+    abort(404)
