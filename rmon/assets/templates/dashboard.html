@@ -6,6 +6,40 @@
       <div class="row">
         <div class="span6" ng-repeat="node in cluster.nodes">
           <h5>{{node.name}} ({{node.hostname}}:{{node.port}})</h5>
+          <table class="table table-condensed table-bordered">
+            <colgroup>
+              <col width="20%" />
+              <col width="30%" />
+              <col width="20%" />
+              <col width="30%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>version</td>
+                <td>{{node.info.redis_version}}</td>
+                <td>uptime</td>
+                <td>{{node.info.uptime_in_seconds}}</td>
+              </tr>
+              <tr>
+                <td>user</td>
+                <td>{{node.info.used_cpu_user}}</td>
+                <td>sys</td>
+                <td>{{node.info.used_cpu_sys}}</td>
+              </tr>
+              <tr>
+                <td>expired</td>
+                <td>{{node.info.expired_keys}}</td>
+                <td>evicted</td>
+                <td>{{node.info.evicted_keys}}</td>
+              </tr>
+              <tr>
+                <td>hits</td>
+                <td>{{node.info.keyspace_hits}}</td>
+                <td>misses</td>
+                <td>{{node.info.keyspace_misses}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
