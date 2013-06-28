@@ -11,6 +11,12 @@ class Clusters:
     def update(self, kv):
         self.config.update(kv)
 
+    def get(self, id):
+        for cluster in self.clusters:
+            if cluster.id == id:
+                return cluster
+        return None
+
     def load(self):
         if self.loader is None:
             fullname = self.config.get('NODE_LOADER', 'rmon.loaders.dummy')
